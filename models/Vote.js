@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const voteSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   pollId: { type: mongoose.Schema.Types.ObjectId, ref: 'Poll', required: true },
-  messId: { type: mongoose.Schema.Types.ObjectId, ref: 'Mess', required: true },
+  messId: { type: String, ref: 'Mess', required: true },
   mealType: { type: String, enum: ['veg', 'nonVeg', 'fast', 'skip'], required: true },
   optionId: { type: String, default: null },
   isComing: { type: Boolean, default: true },
