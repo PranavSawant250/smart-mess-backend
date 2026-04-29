@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const Mess = require('../models/Mess');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const signToken = (userId, role, messId) => {
